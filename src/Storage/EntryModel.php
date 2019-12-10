@@ -2,9 +2,11 @@
 
 namespace Laravel\Telescope\Storage;
 
-use Illuminate\Database\Eloquent\Model;
+//use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model as Moloquent;
 
-class EntryModel extends Model
+//class EntryModel extends Model
+class EntryModel extends Moloquent
 {
     /**
      * The table associated with the model.
@@ -165,7 +167,7 @@ class EntryModel extends Model
             return $this;
         }
 
-        $query->where('should_display_on_index', true);
+        //$query->where('should_display_on_index', true);
 
         return $this;
     }
